@@ -120,6 +120,7 @@ public class MainActivityFragment extends Fragment {
                     showMessage("picassoGet success");
                 } catch (IOException e) {
                     Log.e(LOG_TAG, e.toString());
+                    e.printStackTrace();
                     showMessage("picassoGet error: " + e.toString());
                 }
             }
