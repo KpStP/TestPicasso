@@ -7,13 +7,75 @@
     tools:context=".MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <Spinner
+        android:id="@+id/imageUrlSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<EditText-->
+    <!--android:id="@+id/imageUrlEditText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:ems="10"-->
+    <!--android:hint="Image url"-->
+    <!--android:inputType="text"-->
+    <!--android:text="http://orientaldaily.on.cc/cnt/news/20180611/photo/0611-00176-002p1g1.jpg"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/picassoGetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Get"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUrlSpinner" />
+
+    <Button
+        android:id="@+id/picassoIntoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Into"
+        app:layout_constraintStart_toEndOf="@+id/picassoGetButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageUrlSpinner" />
+
+    <Button
+        android:id="@+id/picassoGetAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Get all"
+        app:layout_constraintStart_toEndOf="@+id/picassoIntoButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageUrlSpinner" />
+
+    <ImageView
+        android:id="@+id/picassoImageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="16dp"
+        android:src="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
